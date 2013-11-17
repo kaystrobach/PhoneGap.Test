@@ -14,42 +14,23 @@
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <script type="text/javascript" charset="utf-8">
     
-    // Wait for PhoneGap to load
-    // 
-    document.addEventListener("deviceready", onDeviceReady, false);
-    
-    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
-    //
-    function onDeviceReady() {
-        checkConnection();
-    }
-    
-    function checkConnection() {
-        var networkState = navigator.network.connection.type;
-    
-        var states = {};
-        states[Connection.UNKNOWN]  = 'Unknown connection';
-        states[Connection.ETHERNET] = 'Ethernet connection';
-        states[Connection.WIFI]     = 'WiFi connection';
-        states[Connection.CELL_2G]  = 'Cell 2G connection';
-        states[Connection.CELL_3G]  = 'Cell 3G connection';
-        states[Connection.CELL_4G]  = 'Cell 4G connection';
-        states[Connection.NONE]     = 'No network connection';
-    
-        switch(networkState) {
-          case Connection.WIFI:
-            // everything seems to be fine
-          break;
-          case Connection.NONE:
-            alert('You are not connected to the internet. Application won´t work ...');
-          break;
-          default:
-            alert('Mobile Connections may result in slow to NO user experience ...');
-          break;
-        }
-    
-        alert('Connection type: ' + states[networkState]);
-    }
+    document.addEventListener(
+      "offline",
+      function(){
+        alert("You're offline")
+      },
+      false
+    );
+
+    document.addEventListener(
+      "online",
+      function(){
+        alert("You're online")
+      },
+      false
+    );
+
+
     
     </script>
   </head>
