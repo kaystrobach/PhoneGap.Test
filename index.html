@@ -10,6 +10,8 @@
         width: 100%;
         height: 100%;
       }
+      #floater	{float:left; height:50%; margin-bottom:-100px;}
+      #content	{clear:both; height:200px; position:relative;}
     </style>
     <script type="text/javascript" charset="utf-8" src="contrib/jquery/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
@@ -42,7 +44,11 @@
       <iframe src="https://ieb-logger.de"></iframe>
     </div>
     <div class="offline">
-      Sry, but your are not connected to the internet.
+      <div id="floater">
+        <div id="content">
+	        <object type="image/svg+xml" data="contrib/iconmonstr/iconmonstr-wireless-3-icon.svg" width="200" height="200" border="0"></object>
+        </div>
+      </div>
     </div>
   </body>
 </html>
