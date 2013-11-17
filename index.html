@@ -18,7 +18,8 @@
     document.addEventListener(
       "offline",
       function(){
-        alert("You're offline")
+        jQuery('.offline').show();
+        jQuery('.online').hide();
       },
       false
     );
@@ -26,7 +27,8 @@
     document.addEventListener(
       "online",
       function(){
-        alert("You're online")
+        jQuery('.online').show();
+        jQuery('.offline').hide();
       },
       false
     );
