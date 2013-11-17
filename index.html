@@ -10,8 +10,14 @@
         width: 100%;
         height: 100%;
       }
-      #floater	{float:left; height:50%;   width:100%; overflow:visible; margin-bottom:-100px;}
-      #content	{clear:both; height:200px; width:100%; overflow:visible; position:relative;}
+      .offline {
+      	background-image: url(contrib/iconmonstr/iconmonstr-wireless-3-icon.svg);
+	background-size: cover;
+	background-position:center center;
+	background-repeat: no-repeat;
+      	width: 100%;
+      	height: 100%;
+      }
     </style>
     <script type="text/javascript" charset="utf-8" src="contrib/jquery/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
@@ -44,11 +50,6 @@
       <iframe src="https://ieb-logger.de"></iframe>
     </div>
     <div class="offline">
-      <div id="floater">
-        <div id="content">
-	        <object type="image/svg+xml" data="contrib/iconmonstr/iconmonstr-wireless-3-icon.svg" width="200" height="200" border="0"></object>
-        </div>
-      </div>
     </div>
   </body>
 </html>
