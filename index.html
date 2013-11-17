@@ -36,6 +36,18 @@
         states[Connection.CELL_4G]  = 'Cell 4G connection';
         states[Connection.NONE]     = 'No network connection';
     
+        switch(networkState) {
+          case Connection.WIFI:
+            // everything seems to be fine
+          break;
+          case Connection.NONE:
+            alert('You are not connected to the internet. Application won´t work ...');
+          break;
+          default:
+            alert('Mobile Connections may result in slow to NO user experience ...');
+          break;
+        }
+    
         alert('Connection type: ' + states[networkState]);
     }
     
